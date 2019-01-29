@@ -2,4 +2,172 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+/* FLOAT */
+.float_left{
+  float: left;
+  height: 100%;
+}
+.float_right{
+  float: right;
+  height: 100%;
+}
+.clearfix::after{
+  clear: both;
+  content: '';
+  display: table;
+}
+/* FINE FLOAT */
+/* ALLINEAMENTO */
+.center_vo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center_v{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.txt_center{
+  text-align: center;
+}
+/* FINE ALLINEAMENTO */
+.txt_white{
+  color: white
+}
+.topbar{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(49, 65, 81);
+  border-top: 4px solid orange;
+  border-color: rgb(255, 121, 89);
+  padding-left: 50px;
+  padding-right: 20px;
+  position: relative;
+  line-height: 60px;
+  font-size: 14px;
+}
+
+#logo_s{
+  margin-top: 15px;
+  height: 30px;
+}
+
+#profile{
+  border-radius: 50%;
+  height: 30px;
+}
+
+#box_profile{
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+
+.topbar i{
+  font-size: 10px
+}
+.fa-cog, .fa-search{
+  padding: 0 15px;
+}
+
+.topbar a, .topbar i{
+  text-decoration: none;
+  color: white;
+}
+.topbar li{
+  list-style-type: none;
+}
+
+.float_left li{
+  padding: 0 10px;
+}
+
+.container{
+  width: 1000px;
+  margin: auto;
+}
+
+.hero{
+  background-image: url('img/hero_background.png');
+  height: auto;
+  background-size: cover;
+}
+
+.hero_content{
+  width: 400px;
+  padding: 100px 0;
+  /* color: white; */
+}
+.half_txt_hero{
+  width: 200px;
+}
+.hero_content h1{
+  font-size: 40px;
+}
+.hero_content  p{
+  font-size: 14px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.btn{
+text-decoration: none;
+border-radius: 5px;
+}
+.btn_wht{
+  background-color: white;
+  color: #516475;
+}
+.btn_orange{
+  background-color: #ff7a59;
+  color: white;
+}
+.btn_big{
+  padding: 24px 48px;
+}
+.btn_m{
+  padding: 12px 24px;
+}
+.services{
+  background: #f5f8fa;
+  color: #516475;
+}
+.container_s{
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 100px 0 50px;
+}
+.container_s > img{
+  width: 300px;
+}
+.container_s > p{
+  padding: 20px 0;
+}
+.center_box{
+  border-radius: 5px;
+  width: 100%;
+  /* height: 100%; */
+  background-color: white;
+  padding: 40px;
+
+}
+.contentleft_center_box{
+  width: 30%;
+}
+.center_box a{
+  margin-top: 30px;
+}
+.contentright_center_box{
+  width: 60%
+}
+
+.center_box img{
+width: 200px;
+margin: 0 30px 40px 30px
+
 }
