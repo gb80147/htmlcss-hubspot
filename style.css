@@ -30,10 +30,10 @@ p{
   font-weight: 300;
 }
 /* FLOAT */
-.float_left, .box_left, .box_right, .box_center, .grid_item, .left_side_customers, .right_side_customers div, .left_get_hubspot_free, .first_clm, .second_clm, .third_clm, .fourth_clm, .copyright{
+.navbox_left, .float_left, .middle_bar_left, .middle_bar_right ul li, .box_left, .box_right, .box_center, .grid_item, .left_side_customers, .right_side_customers div, .left_get_hubspot_free, .first_clm, .second_clm, .third_clm, .fourth_clm, .copyright{
   float: left;
 }
-.float_right, .right_side_customers, .right_get_hubspot_free, .privacy_policy{
+.navbox_right, .float_right, .middle_bar_right, .right_side_customers, .right_get_hubspot_free, .privacy_policy{
   float: right;
 }
 .clearfix::after{
@@ -64,12 +64,14 @@ p{
 .txt_blue{
   color: #33475b;
 }
+.orange_line{
+  height: 4px;
+  background-color: rgb(255, 121, 89);
+}
 .topbar{
   width: 100%;
   height: 60px;
   background-color: #33475b;
-  border-top: 4px solid orange;
-  border-color: rgb(255, 121, 89);
   padding-left: 50px;
   padding-right: 20px;
   position: relative;
@@ -78,6 +80,30 @@ p{
   position: sticky;
   top: 0;
   z-index: 1;
+}
+.middle_bar{
+  height: 80px;
+  background-color: #f5f8fa;
+}
+.middle_bar_content{
+  height: 100%;
+  line-height: 80px;
+}
+.middle_bar img{
+  width: 16px;
+  margin-right: 5px;
+}
+.middle_bar_content{
+  font-size: 14px
+}
+.middle_bar_left i{
+  margin-left: 5px;
+}
+.middle_bar_right li{
+  margin-left: 10px;
+}
+.middle_bar #sales{
+  margin: 0 10px;
 }
 #logo_s{
   margin-top: 15px;
@@ -92,21 +118,20 @@ p{
   width: 60px;
   height: 60px;
 }
-.topbar i{
-  font-size: 10px
-}
 .fa-cog, .fa-search{
   padding: 0 15px;
+  font-size: 18px;
 }
-.topbar a, .topbar i, footer li a, .languages a{
+a, .topbar i{
   text-decoration: none;
   color: white;
 }
-.topbar li, .contentright_center_box ul, .three_column ul, footer ul{
+ul{
   list-style-type: none;
 }
 .navbox_left li{
   padding: 0 10px;
+  height: 60px;
 }
 .hero{
   background-image: url('img/hero_background.png');
@@ -135,8 +160,21 @@ p{
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.btn_login{
+  color: #ff7a59;
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid #ff7a59;
+  border-radius: 5px;
+}
+.btn_get{
+  color: white;
+  background-color: #ff7a59;
+  padding: 10px 15px;
+  border: 1px solid #ff7a59;
+  border-radius: 5px;
+}
 .btn{
-text-decoration: none;
 border-radius: 5px;
 }
 .btn_wht{
@@ -357,7 +395,6 @@ footer{
   color: #cbd6e2;
 }
 .privacy_policy > a{
-  text-decoration: none;
   padding: 10px 15px;
   color: #cbd6e2;
   font-weight: 300;
