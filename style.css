@@ -2,16 +2,39 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.container_l{
+  width: 1200px;
+  margin: auto;
+}
+.container_m{
+  width: 1000px;
+  margin: auto;
+}
+.container_s{
+  width: 800px;
+  margin: auto;
+  padding: 100px 0;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 40px;
+}
+h4{
+  font-weight: 700;
+}
+p{
+  font-weight: 300;
 }
 /* FLOAT */
-.float_left, .box_left, .box_right, .box_center{
+.float_left, .box_left, .box_right, .box_center, .grid_item, .left_side_customers, .right_side_customers div, .left_get_hubspot_free, .first_clm, .second_clm, .third_clm, .fourth_clm, .copyright{
   float: left;
-  height: 100%;
 }
-.float_right{
+.float_right, .right_side_customers, .right_get_hubspot_free, .privacy_policy{
   float: right;
-  height: 100%;
 }
 .clearfix::after{
   clear: both;
@@ -39,12 +62,12 @@
   color: white
 }
 .txt_blue{
-  color: #516475;
+  color: #33475b;
 }
 .topbar{
   width: 100%;
   height: 60px;
-  background-color: rgb(49, 65, 81);
+  background-color: #33475b;
   border-top: 4px solid orange;
   border-color: rgb(255, 121, 89);
   padding-left: 50px;
@@ -52,6 +75,9 @@
   position: relative;
   line-height: 60px;
   font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 #logo_s{
   margin-top: 15px;
@@ -72,38 +98,40 @@
 .fa-cog, .fa-search{
   padding: 0 15px;
 }
-.topbar a, .topbar i{
+.topbar a, .topbar i, footer li a, .languages a{
   text-decoration: none;
   color: white;
 }
-.topbar li, .contentright_center_box ul, .three_column ul{
+.topbar li, .contentright_center_box ul, .three_column ul, footer ul{
   list-style-type: none;
 }
 .navbox_left li{
   padding: 0 10px;
 }
-.container{
-  width: 1000px;
-  margin: auto;
-}
 .hero{
   background-image: url('img/hero_background.png');
   height: auto;
   background-size: cover;
+  position: relative;
+  padding: 100px 0;
+}
+.hero > img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .hero_content{
   width: 400px;
-  padding: 100px 0;
-  /* color: white; */
+  padding-bottom: 200px;
 }
 .half_txt_hero{
   width: 200px;
+  padding-top: 40px
 }
 .hero_content h1{
-  font-size: 40px;
+  font-size: 50px;
 }
 .hero_content  p{
-  font-size: 14px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -113,6 +141,7 @@ border-radius: 5px;
 }
 .btn_wht{
   background-color: white;
+  color: #516475;
 }
 .btn_orange{
   background-color: #ff7a59;
@@ -128,19 +157,12 @@ border-radius: 5px;
 }
 .services{
   background: #f5f8fa;
-  color: #516475;
-}
-.container_s{
-  width: 800px;
-  margin: auto;
-  text-align: center;
-  padding: 100px 0 50px;
 }
 .container_s > img{
   width: 300px;
 }
 .container_s > p{
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .center_box{
   width: 100%;
@@ -151,13 +173,13 @@ border-radius: 5px;
   border-radius: 5px;
   background-color: white;
 }
-.contentleft_center_box{
+.contentleft_center_box, .left_side_customers{
   width: 30%;
 }
 .center_box a{
   margin-top: 30px;
 }
-.contentright_center_box{
+.contentright_center_box, .right_side_customers{
   width: 60%
 }
 .center_box img{
@@ -167,12 +189,13 @@ margin: 0 40px 0 30px
 .center_box h2{
   margin: 10px 0;
 }
-.center_box p{
-  margin: 15px 0;
+.contentright_center_box > p{
+  margin: 25px 0;
 }
 .popular_features p{
   position: relative;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 .popular_features p::after{
   content: '';
@@ -189,11 +212,10 @@ margin: 0 40px 0 30px
 }
 .popular_features ul li, .three_column ul li{
   margin-right: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .box_left, .box_right, .box_center{
   width: 32%;
-  height: 100%;
   padding: 30px;
 }
 .box_center{
@@ -216,4 +238,144 @@ margin: 0 40px 0 30px
 }
 .three_column{
   padding-bottom: 150px;
+}
+.hubspot{
+  background-image: url('img/background_hubspot.png');
+  height: auto;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.grid_item{
+  width: 25%;
+  padding: 30px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.grid_item > h3{
+  position: relative;
+  margin: 10px 0;
+}
+.plus_after::after{
+  content: '+';
+  font-size: 16px;
+  font-weight: 200;
+  padding-left: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.grid .grid_item:nth-child(n+5){
+  border-bottom: none;
+}
+.grid .grid_item:nth-child(4), .grid .grid_item:nth-child(8){
+  border-right: none;
+}
+.customers{
+  padding: 100px 0;
+}
+.left_side_customers h3{
+  padding-bottom: 10px;
+}
+.right_side_customers div{
+  text-align: center;
+  width: 25%;
+  height: 100px;
+  padding: 10px;
+}
+.right_side_customers img{
+  max-width: 100%;
+}
+.get_hubspot_free{
+  padding: 150px 0;
+}
+.left_get_hubspot_free, .right_get_hubspot_free{
+  width: 35%;
+}
+.left_get_hubspot_free{
+  padding-top: 50px;
+}
+.left_get_hubspot_free > p{
+  padding: 20px 0;
+}
+small{
+  display: block;
+  font-size: 10px;
+  padding-top: 10px;
+}
+.background_image{
+  width: 375px;
+  height: 375px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f2547d;
+}
+.background_image img{
+  width: 100%;
+}
+footer{
+  background-color: #33475b;
+  padding-top: 100px;
+}
+.first_clm, .second_clm, .third_clm, .fourth_clm{
+  width: 25%;
+}
+.fourth_clm{
+  padding-right: none;
+}
+.first_clm *, .second_clm *, .third_clm *, .fourth_clm *{
+  padding: 8px 0;
+}
+.first_clm a, .second_clm a, .third_clm a, .fourth_clm a{
+  font-weight: 300;
+  font-size: 14px;
+}
+.fourth_clm li a.btn{
+  color: #516475;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.btn_social a{
+  padding: 20px 10px;
+  font-size: 20px;
+}
+.btn_social a:first-child{
+  padding-left: 0;
+}
+.languages{
+  padding: 50px 0;
+  border-bottom: 1px solid #7c98b6;
+}
+.languages a{
+  padding: 0 15px;
+  font-weight: 300;
+}
+.end_footer{
+  padding: 50px 0 50px
+}
+.container_columns_footer li > a, .languages a, .end_footer{
+  color: #cbd6e2;
+}
+.privacy_policy > a{
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #cbd6e2;
+  font-weight: 300;
+}
+.hubbot{
+  width: 60px;
+  height: 60px;
+  background-color: #425b76;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+.hubbot i{
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
